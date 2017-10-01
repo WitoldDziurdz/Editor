@@ -77,7 +77,7 @@ public class View extends JFrame implements ActionListener {
         JScrollPane jScrollPane = new JScrollPane(htmlTextPane);
         tabbedPane.addTab("HTML",jScrollPane);
         JScrollPane jScrollPane1 = new JScrollPane(plainTextPane);
-        tabbedPane.addTab("Текст",jScrollPane1);
+        tabbedPane.addTab("Text",jScrollPane1);
         tabbedPane.setPreferredSize(new Dimension(600,400));
         TabbedPaneChangeListener tabbedPaneChangeListener = new TabbedPaneChangeListener(this);
         tabbedPane.addChangeListener(tabbedPaneChangeListener);
@@ -149,22 +149,22 @@ public class View extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         switch (action){
-            case "Новый":
+            case "New":
                 controller.createNewDocument();
                 break;
-            case "Открыть":
+            case "Open":
                 controller.openDocument();
                 break;
-            case "Сохранить":
+            case "Save":
                 controller.saveDocument();
                 break;
-            case "Сохранить как...":
+            case "Save as...":
                 controller.saveDocumentAs();
                 break;
-            case "Выход":
+            case "Exit":
                 controller.exit();
                 break;
-            case "О программе":
+            case "About the program":
                 showAbout();
                 break;
         }

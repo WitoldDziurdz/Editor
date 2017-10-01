@@ -74,7 +74,7 @@ public class Controller {
     public void createNewDocument(){
         view.selectHtmlTab();
         resetDocument();
-        view.setTitle("HTML redactor");
+        view.setTitle("HTML editor");
         currentFile = null; 
         view.resetUndo();
     }
